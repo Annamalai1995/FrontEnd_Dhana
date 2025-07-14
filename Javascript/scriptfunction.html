@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USing Script Function</title>
+    <script>
+        function print()
+        {
+            var css=document.getElementsByTagName('li')[3];
+            // css.style.color='violet';
+            css.style.borderStyle='dotted';
+
+            let design=document.getElementById('Data');
+            design.style.color='green';
+            design.style.textTransform='uppercase';
+
+
+            
+        }
+
+    </script>
+</head>
+<body>
+    <h2>CALLING FUNCTION</h2>
+    <ol type="A"  onclick="print()">
+        <li>Munnar</li>
+        <li>Manali</li>
+        <li>vizag</li>
+        <li id="Data">Hyderabad</li>
+        <li>Salem</li>
+        <li>Chennai</li>
+    </ol>
+    
+</body>
+</html>
