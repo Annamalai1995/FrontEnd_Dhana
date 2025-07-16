@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+    <script>
+        let cooling_places=new Array()
+        cooling_places.push('Manali')
+        cooling_places.push('ooty')
+        cooling_places.push('Kodaikanal')
+        cooling_places.push('Munnar')
+        // cooling_places.unshift('yercaud')
+        // cooling_places.shift()
+        cooling_places.pop()
+
+        document.writeln(cooling_places)
+        function view(temp){
+            alert(temp)
+        }
+        cooling_places.map(view)
+    </script>
+    
+</body>
+</html>
