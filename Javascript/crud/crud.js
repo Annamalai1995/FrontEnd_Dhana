@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const username = document.getElementById("username").value;
       const password = document.getElementById("password").value;
   
-      if (username === "Annamalai" && password === "123") {
+      if (username =="Annamalai" && password == "123") {
         sessionStorage.setItem("loggedInUser", username);
         checkLogin();
       } else {
@@ -104,14 +104,13 @@ document.addEventListener("DOMContentLoaded", () => {
       studentIndex.value = index;
     };
     //Remove Element
-    window.deleteStudent=(index)=>{
-      const student=JSON.parse(sessionStorage.getItem("students"));
-      student.splice(index,1); //slice remove the element in an array start and end Ex:Dinesh-start D ending-s-Dines
-      sessionStorage.setItem("students",JSON.stringify("students"));
-      loadStudents();
+  window.deleteStudent = (index) => {
+  const students = JSON.parse(sessionStorage.getItem("students")) || [];
+  students.splice(index, 1); // remove ONE
+  sessionStorage.setItem("students", JSON.stringify(students));
+  loadStudents();
+};
 
-    };
-  
     
   
     checkLogin();
